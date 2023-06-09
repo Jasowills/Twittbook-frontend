@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --lato: "Lato", sans-serif;
+
+  --light: #f9f9f9;
+  --blue: #007bff;
+  --dark: #06141d;
+  --shade: #0e2533;
+}
+.body {
+  background-color: var(--dark);
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+.logo {
+  width: 90px;
+  height: 65px;
+}
+.center {
+  margin: auto;
+  display: flex;
+  margin-top: 200px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.text-container {
+  display: flex;
+}
+.head {
+  font-size: 35px;
+  color: var(--blue);
+}
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+.flex {
+  display: flex;
+  margin: auto;
+  margin-top: 180px;
+  width: 80%;
+  padding: 1rem;
+  height: 60%;
+}
+.get {
+  display: flex;
+  flex-direction: column;
+}
+.logo-text {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.text {
+  color: white;
+  font-size: 22px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.login-container {
+  background-color: var(--shade);
+  padding: 20px 30px 40px 20px;
+  width: 45%;
+  height: 90%;
+  border-radius: 15px;
+  box-shadow: -1px 6px 10px 3px rgba(9, 10, 15, 0.75);
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  margin-top: 30px;
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 4px;
+}
+.opt {
+  text-align: center;
+  color: white;
+  padding: 1px 2px 5px 2px;
+  margin-top: 30px;
+  font-size: 16px;
+}
+.link {
+  color: var(--blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+.button {
+  width: 100%;
+  height: 40px;
+  background-color: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #0069d9;
+}
+
+/* SignupModal.css */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.choose{
+  color: var(--blue);
+}
+.modal-dialog {
+  position: relative;
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+  background-color: var(--shade);
+  border-radius: 5px;
+  box-shadow: -1px 6px 10px 3px rgba(9, 10, 15, 0.75);
+}
+
+.modal-header {
+  padding: 21px;
+}
+.modal-header h3 {
+  font-size: 25px;
+  color: white;
+}
+.modal-header p {
+  font-size: 18px;
+  color: white;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 20px;
+}
+.pad{
+  height: 90%;
+  margin-top: -30px;
+}
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  text-align: center;
+  margin: auto;
+  padding-top: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+    height: 40px;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #e9e9e9;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  color: #999;
+  opacity: 0.8;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.rower {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.col-input {
+  width: 100%;
+  margin-bottom: 0;
+}
+.ex-label {
+  margin-top: 7px;
+  margin-bottom: 3px;
+}
+.ex-input {
+  width: 100%;
+}
+ 
+@media screen and (max-width: 900px) {
+  .ex-input{
+    width: 100%
+  }
+  .col-input{
+    
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .text {
+    font-size: 17px;
+  }
+
+  .get {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+
+  .head {
+    text-align: center;
+    margin: auto;
+  }
+
+  .login-container {
+    width: 80%;
+    height: fit-content;
+  }
+  .modal-dialog {
+    position: relative;
+    width: 93%;
+    margin: auto;
+    background-color: var(--shade);
+    border-radius: 5px;
+  }
+}
