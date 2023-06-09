@@ -185,6 +185,7 @@ function SignupForm({ handleCloseModal }) {
         id="profilePictureInput"
         className="choose"
         type="file"
+        required
         accept="image/*"
         onChange={handleProfilePictureChange}
       />
