@@ -23,8 +23,8 @@ const Post = ({ post }) => {
   const isVerified = useSelector((state) => state.login.isVerified);
   const userId = "647a0f99abf4aebc224fad47";
   const Twittbook = "647b03b506bd3ae20b2d5f92";
-  const isUserVerified =  post.user && post.userId === userId;
-  const isTwittbook =  post.user && post.userId === Twittbook;
+  const isUserVerified = post.userId === userId;
+  const isTwittbook =  post.userId === Twittbook;
 
   const [commentInput, setCommentInput] = useState("");
   const [showComments, setShowComments] = useState(false);
