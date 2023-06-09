@@ -104,33 +104,37 @@ a {
 }
 /* Customize the scrollbar styles for the sidebar */
 .wrap-column::-webkit-scrollbar {
-  width: 8px;
   /* Set the width of the scrollbar */
+  display: none;
 }
 
 .wrap-column::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+    display: none;
   /* Set the background color of the scrollbar track */
 }
 
 .wrap-column::-webkit-scrollbar-thumb {
   background-color: #888;
+    display: none;
   /* Set the color of the scrollbar thumb */
 }
 
 /* Customize the scrollbar styles for the content */
 .content::-webkit-scrollbar {
   width: 8px;
+    display: none;
   /* Set the width of the scrollbar */
 }
 
 .content::-webkit-scrollbar-track {
   background-color: #f1f1f1;
+    display: none;
   /* Set the background color of the scrollbar track */
 }
 
 .content::-webkit-scrollbar-thumb {
   background-color: #888;
+    display: none;
   /* Set the color of the scrollbar thumb */
 }
 .sidebar-menu {

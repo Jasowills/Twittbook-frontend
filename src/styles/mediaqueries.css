@@ -173,13 +173,10 @@
   width: fit-content;
 }
 .conversation-container{
-  border: 1px solid red;
 }
 .message-conversation{
-  border: 1px solid red;
 }
 .message-modal-content{
-  border: 1px solid red;
   width: 80%;
 }
 .bars {
