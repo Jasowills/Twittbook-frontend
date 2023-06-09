@@ -5,18 +5,18 @@
 
   .col-input {
   }
-.nav{
-  width: 60%;
-}
-.nav ul li{
-  font-size: 22px;
-}
-.mid{
-  display: flex;
-  justify-content: center !important;
-  width: 42%;
-  padding: 7px;
-}
+  .nav {
+    width: 60%;
+  }
+  .nav ul li {
+    font-size: 22px;
+  }
+  .mid {
+    display: flex;
+    justify-content: center !important;
+    width: 42%;
+    padding: 7px;
+  }
   .flex {
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@
     margin-top: 65px;
     padding: none !important;
   }
-  .post-image{
+  .post-image {
     width: 100%;
   }
   .aside {
@@ -128,63 +128,73 @@
     padding: 0;
     margin-right: 0;
   }
-.header{
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 100%;
-  display: flex;
-  height: fit-content !important;
-  align-items: center !important;
-  justify-content: space-evenly !important;
-}
-.explore{
-  width: 98%;
-  border: none;
-  justify-content: center;
-  display: flex;
+  .header {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    display: flex;
+    height: fit-content !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+  }
+  .explore {
+    width: 98%;
+    border: none;
+    justify-content: center;
+    display: flex;
 
-  flex-direction: column;
-  justify-content: center;
-  padding: 3px !important;
-  margin: 0 !important;
-}.explore-lists{
-  width: 100%;
-  margin: 0 !important;
-  margin-left: 0;
-  margin-bottom: 20px !important;
-  margin: auto;
-}
-.notification-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0px;
-  width: 320px;
-  background-color: #0e2533;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  padding: 16px;
-}
-.set-container{
-  height: 100vh;
-}
-.settings-container{
-  height: fit-content;
-  flex-direction: column;
-  width: fit-content;
-}
-.conversation-container{
-}
-.message-conversation{
-}
-.message-modal-content{
-  width: 80%;
-}
-.bars {
-  display: block;
-}
+    flex-direction: column;
+    justify-content: center;
+    padding: 3px !important;
+    margin: 0 !important;
+  }
+  .explore-lists {
+    width: 100%;
+    margin: 0 !important;
+    margin-left: 0;
+    margin-bottom: 20px !important;
+    margin: auto;
+  }
+  .notification-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 320px;
+    background-color: #0e2533;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 16px;
+  }
+  .set-container {
+    height: 100vh;
+  }
+  .settings-container {
+    height: fit-content;
+    flex-direction: column;
+    width: fit-content;
+  }
+  .conversation-container {
+        width: fit-content;
+  }
+  .message-conversation {
+    padding: 2px !important;
+    margin: 0 !important;
+  }
+  .message-modal-content {
+    width: 80%;
+  }.message{
+  }
+  .sender{
+  }
+  .receiver{
+    /* width: fit-content; */
+  }
+  .bars {
+    display: block;
+  }
   .prof {
     margin-left: 0;
     margin: 0;
-  }/* Add these styles to your CSS file or style component */
-    /* Add these styles to your CSS file */
+  } /* Add these styles to your CSS file or style component */
+  /* Add these styles to your CSS file */
 }

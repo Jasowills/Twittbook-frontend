@@ -11,6 +11,7 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import { createPost } from "../redux/actions/postActions";
+import { Resizer } from "react-image-file-resizer";
 
 function Content() {
   const dispatch = useDispatch();
@@ -18,14 +19,13 @@ function Content() {
   const userProfilePic = profilePicture || profilePic;
   const [postContent, setPostContent] = useState("");
   const [postImage, setPostImage] = useState("");
-  const [showImage, setShowImage] = useState(false); // State variable to track if the image is displayed
-  const [isPosting, setIsPosting] = useState(false); // State variable to track if the post is being submitted
+  const [showImage, setShowImage] = useState(false);
+  const [isPosting, setIsPosting] = useState(false);
   const userId = useSelector((state) => state.login.userId);
   const inputFileRef = useRef(null);
 
   const tagshow = () => {
     const tags = document.getElementsByClassName("tag");
-    // Loop through the collection of elements and set the style for each tag
     for (let i = 0; i < tags.length; i++) {
       tags[i].style.display = "block";
     }
@@ -33,7 +33,6 @@ function Content() {
 
   const tagshow1 = () => {
     const tags = document.getElementsByClassName("tag");
-    // Loop through the collection of elements and set the style for each tag
     for (let i = 0; i < tags.length; i++) {
       tags[i].style.display = "none";
     }
@@ -43,12 +42,38 @@ function Content() {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
-    // Convert the image to a string
     const reader = new FileReader();
-    reader.onload = (event) => {
-      const imageData = event.target.result;
-      setPostImage(imageData);
-      setShowImage(true); // Set showImage to true to display the image
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        const MAX_WIDTH = 800;
+        const MAX_HEIGHT = 600;
+        let width = img.width;
+        let height = img.height;
+
+        if (width > height) {
+          if (width > MAX_WIDTH) {
+            height *= MAX_WIDTH / width;
+            width = MAX_WIDTH;
+          }
+        } else {
+          if (height > MAX_HEIGHT) {
+            width *= MAX_HEIGHT / height;
+            height = MAX_HEIGHT;
+          }
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, width, height);
+
+        const compressedImageData = canvas.toDataURL("image/jpeg", 0.8);
+        setPostImage(compressedImageData);
+        setShowImage(true);
+      };
+      img.src = e.target.result;
     };
     reader.readAsDataURL(file);
   };
@@ -60,26 +85,25 @@ function Content() {
       userId,
       content: postContent,
       image: postImage,
-      // Add any other data you want to send to the server
     };
 
-    setIsPosting(true); // Set isPosting to true to indicate the post is being submitted
+    setIsPosting(true);
     dispatch(createPost(userId, postData))
       .then(() => {
         setPostContent("");
         setPostImage("");
-        setShowImage(false); // Clear the input and hide the image after submitting the post
-        setIsPosting(false); // Reset isPosting after the post is submitted
+        setShowImage(false);
+        setIsPosting(false);
       })
       .catch((error) => {
         console.log("Error creating post:", error);
-        setIsPosting(false); // Reset isPosting if there was an error
+        setIsPosting(false);
       });
   };
 
   const handleCloseImage = () => {
     setPostImage("");
-    setShowImage(false); // Close the image by clearing the input and hiding the image
+    setShowImage(false);
   };
 
   return (
