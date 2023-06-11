@@ -21,11 +21,7 @@ const Post = ({ post }) => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(true);
   const isVerified = useSelector((state) => state.login.isVerified);
-  const userId = "647a0f99abf4aebc224fad47";
-  const Twittbook = "647b03b506bd3ae20b2d5f92";
-  const isUserVerified = post.userId === userId;
-  const isTwittbook =  post.userId === Twittbook;
-
+  const userId = useSelector((state) => state.login.userId);
   const [commentInput, setCommentInput] = useState("");
   const [showComments, setShowComments] = useState(false);
   const comments = useSelector((state) => state.comment.comments[0]);
@@ -101,8 +97,7 @@ const Post = ({ post }) => {
         <div className="post-header">
           <h3 className="post-name">
             {post.user && post.user.username} &nbsp;
-            {isUserVerified && <VerifiedBadge />}
-            {isTwittbook && <VerifiedBadge />}
+           
           </h3>
           <span>{formatTime(post.createdAt)}</span>
         </div>
@@ -136,7 +131,7 @@ const Post = ({ post }) => {
                   <div className="comment-content">
                     <p className="comment-username">
                       {comment.user && comment.user.username}{" "}
-                      {isUserVerified && <VerifiedBadge />}
+                      
                     </p>
                     <p className="comment-text">{comment.content}</p>
                   </div>
