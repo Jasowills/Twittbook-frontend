@@ -10,7 +10,7 @@ import {
 export const addComment = (userId, commentData) => async (dispatch) => {
   try {
     const response = await fetch(
-      `https://pink-lovely-hen.cyclic.app/comments/${userId}`,
+      `https://twittbook-backend.onrender.com/comments/${userId}`,
       {
         method: "POST",
         headers: {
