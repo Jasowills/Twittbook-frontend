@@ -11,7 +11,7 @@ export const sendMessage = (data) => async (dispatch) => {
   const { senderId, receiverId, content} = data
   try {
     const response = await fetch(
-      `https://pink-lovely-hen.cyclic.app/messages`,
+      `https://twittbook-backend.onrender.com/messages`,
       {
         method: "POST",
         headers: {
@@ -45,7 +45,7 @@ export const sendMessage = (data) => async (dispatch) => {
 export const fetchMessages = (senderId, receiverId) => async (dispatch) => {
   try {
     const response = await fetch(
-      `https://pink-lovely-hen.cyclic.app/messages/${senderId}/${receiverId}`
+      `https://twittbook-backend.onrender.com/messages/${senderId}/${receiverId}`
     );
     if (response.ok) {
       const messages = await response.json();
@@ -68,7 +68,7 @@ export const fetchMessages = (senderId, receiverId) => async (dispatch) => {
 
 export const fetchUser = (userId) => async (dispatch) => {
   try {
-    const response = await fetch(`https://pink-lovely-hen.cyclic.app/users`);
+    const response = await fetch(`https://twittbook-backend.onrender.com/users`);
     if (response.ok) {
       const user = await response.json();
 
