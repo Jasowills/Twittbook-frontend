@@ -45,7 +45,7 @@ export const addComment = (userId, commentData) => async (dispatch) => {
 export const deleteComment = (commentId) => async (dispatch) => {
   try {
     const response = await fetch(
-      `https://pink-lovely-hen.cyclic.app/comments/${commentId}`,
+      `https://twittbook-backend.onrender.com/comments/${commentId}`,
       {
         method: "DELETE",
       }
@@ -76,7 +76,7 @@ export const deleteComment = (commentId) => async (dispatch) => {
 export const getCommentsByPostId = (postId) => async (dispatch) => {
   try {
     const response = await fetch(
-      `https://pink-lovely-hen.cyclic.app/posts/${postId}/comments`
+      `https://twittbook-backend.onrender.com/posts/${postId}/comments`
     );
 
     if (response.ok) {
