@@ -2,7 +2,7 @@ import { LIKE_SUCCESS, LIKE_FAILURE, UNLIKE_SUCCESS, UNLIKE_FAILURE } from "../a
 
 export const likePost = (postId, userId) => async (dispatch) => {
   try {
-    const response = await fetch("https://pink-lovely-hen.cyclic.app//like", {
+    const response = await fetch("https://twittbook-backend.onrender.com/like", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const likePost = (postId, userId) => async (dispatch) => {
 export const unlikePost = (likeId) => async (dispatch) => {
   try {
     const response = await fetch(
-      `https://pink-lovely-hen.cyclic.app/like/${likeId}`,
+      `https://twittbook-backend.onrender.com/like/${likeId}`,
       {
         method: "DELETE",
       }
