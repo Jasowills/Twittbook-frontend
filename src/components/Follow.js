@@ -18,7 +18,7 @@ function Follow() {
     const fetchUserDetails = async (userId) => {
       try {
         const response = await fetch(
-          `https://pink-lovely-hen.cyclic.app/users/${userId}`
+          `https://twittbook-backend.onrender.com/posts/users/${userId}`
         );
         const userData = await response.json();
         return userData;
