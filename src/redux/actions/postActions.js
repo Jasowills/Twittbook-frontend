@@ -2,7 +2,7 @@ import { GET_POSTS_SUCCESS, GET_POSTS_FAILURE } from "../actionTypes";
 import { CREATE_POST_SUCCESS, CREATE_POST_FAILURE } from "../actionTypes";
 
 export const getPosts = () => async (dispatch) => {
-  const baseURL = "https://pink-lovely-hen.cyclic.app/posts";
+  const baseURL = "https://twittbook-backend.onrender.com/posts";
   const pollingInterval = 1; // 1 minute
 
   const pollPosts = async () => {
@@ -35,7 +35,7 @@ export const getPosts = () => async (dispatch) => {
 export const createPost = (userId, postData) => async (dispatch) => {
   try {
     const response = await fetch(
-      `https://pink-lovely-hen.cyclic.app/posts/${userId}`,
+      `https://twittbook-backend.onrender.com/posts/${userId}`,
       {
         method: "POST",
         headers: {
