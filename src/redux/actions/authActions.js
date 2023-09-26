@@ -5,7 +5,7 @@ export const signup = (data, navigate) => async (dispatch) => {
 
   try {
     const response = await fetch(
-      "https://pink-lovely-hen.cyclic.app/users/signup",
+      "https://twittbook-backend.onrender.com/users/signup",
       {
         method: "POST",
         headers: {
